@@ -1,0 +1,370 @@
+/* Basic Reset & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light background for contrast */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Add some padding top/bottom */
+}
+
+/* Container */
+.cv-container {
+    display: flex;
+    max-width: 1000px; /* Adjust as needed */
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Columns */
+.left-column {
+    flex: 2; /* Takes up 2/3rds */
+    padding: 30px;
+}
+
+.right-column {
+    flex: 1; /* Takes up 1/3rd */
+    background-color: #004d40; /* Dark Teal */
+    color: #fff;
+    padding: 30px;
+}
+
+/* Links */
+a {
+    color: #0077cc; /* Standard link blue */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.left-column a {
+     color: #00695c; /* Teal link color for left column */
+}
+.right-column a {
+    color: #80cbc4; /* Lighter teal for links on dark bg */
+}
+.right-column a:hover {
+     color: #b2dfdb;
+}
+
+
+/* Header */
+.main-header h1 {
+    color: #004d40; /* Dark Teal */
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main-header h2 {
+    color: #00796b; /* Medium Teal */
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.contact-info {
+    /* Added */
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 5px 15px; /* Add spacing between items (row-gap column-gap) */
+    margin-bottom: 15px; /* Maintain bottom margin */
+    padding-bottom: 10px; /* Maintain padding */
+    border-bottom: 1px solid #eee; /* Maintain border */
+}
+
+.contact-info span {
+    /* Removed display: block; */
+    /* Removed margin-bottom: 5px; (handled by gap) */
+    font-size: 0.9em;
+    color: #555;
+    display: inline-flex; /* Align icon and text nicely */
+    align-items: center;
+}
+.contact-info i {
+    margin-right: 8px;
+    color: #00796b; /* Medium Teal icons */
+    width: 15px; /* Align icons */
+    text-align: center;
+}
+/* Section Headers */
+h3 {
+    text-transform: uppercase;
+    color: #004d40; /* Dark Teal */
+    font-size: 1.1em;
+    margin-top: 25px; /* Space above section */
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00796b; /* Medium Teal underline */
+    letter-spacing: 1px;
+}
+.right-column h3 {
+    color: #fff;
+    border-bottom-color: #80cbc4; /* Lighter teal underline */
+}
+
+/* Experience & Education Items */
+.experience article,
+.education article {
+    margin-bottom: 20px;
+}
+
+/* Font size for Experience description list items */
+.experience article ul li {
+    font-size: 0.8em; /* Target size */
+    line-height: 1.5; /* Added for consistency */
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+.experience article ul li::before { /* Ensure bullets are styled */
+    content: '•';
+    color: #00796b;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    /* Adjust top slightly if needed for vertical alignment */
+    top: 1px;
+}
+
+/* Adjusted font size for Experience descriptions */
+.experience ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em; /* Adjusted font size */
+    position: relative; /* For custom bullet */
+    padding-left: 15px; /* Space for custom bullet */
+}
+
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px; /* Reduced from 5px to 2px */
+}
+
+.job-header h4 {
+    margin-bottom: 0;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #555;
+    white-space: nowrap;
+}
+
+.company-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.company {
+    color: #00796b; /* Medium Teal */
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.location {
+    font-size: 0.9em;
+    color: #555;
+    text-align: right;
+}
+
+h4 { /* Job Title, Degree, Project Title */
+    font-size: 1.1em;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.right-column h4 { /* Publication Titles */
+     color: #e0f2f1; /* Very light teal */
+}
+
+.company, .project-link { /* Company Name, Project Links */
+    color: #00796b; /* Medium Teal */
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+.project-link {
+    font-size: 0.75em; /* Smaller font size for GitHub links */
+    margin-bottom: 8px;
+}
+
+.project-link a {
+    color: #00796b; /* Medium Teal */
+    margin-right: 10px; /* Space between multi-agent links */
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 15px; /* Indent list */
+    margin-top: 5px;
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    position: relative; /* For custom bullet */
+    padding-left: 15px; /* Space for custom bullet */
+}
+
+li::before { /* Custom bullet */
+    content: '•';
+    color: #00796b; /* Medium Teal bullet */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Projects */
+.projects article {
+    margin-bottom: 20px;
+}
+
+/* Font size for Project description paragraphs */
+.projects article p:not(.project-link) {
+    font-size: 0.8em; /* Match the experience description size */
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* Ensure project lists use the exact same styling as experience lists */
+.projects article ul li {
+    font-size: 0.8em; /* Match the experience description size */
+    line-height: 1.5;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+.projects article ul li::before {
+    content: '•';
+    color: #00796b;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+/* Right Column Specifics */
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 190px; /* Adjust size as needed */
+    height: 190px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure image covers the area */
+    border: 3px solid #80cbc4; /* Light teal border */
+}
+
+.right-column p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+.right-column section > p:last-of-type {
+     margin-bottom: 0; /* Remove bottom margin from last p in section */
+}
+
+.right-column section article { /* Publications articles */
+     margin-bottom: 15px;
+     padding-bottom: 10px;
+     border-bottom: 1px dashed #80cbc4; /* Separator */
+}
+.right-column section article:last-of-type {
+     border-bottom: none; /* Remove border from last item */
+     margin-bottom: 0;
+     padding-bottom: 0;
+}
+
+/* Languages */
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+.language-item span:first-child { /* Language name */
+    flex-grow: 1; /* Take available space */
+}
+.language-item .level { /* Proficiency text */
+    color: #b2dfdb; /* Lighter teal */
+    margin: 0 10px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+.dots {
+    display: flex;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #b2dfdb; /* Outline color */
+    margin-left: 4px;
+}
+.dot.filled {
+    background-color: #b2dfdb; /* Fill color */
+}
+
+/* Awards */
+.awards i {
+    color: #80cbc4; /* Light teal gem */
+    margin-right: 8px;
+}
+.awards p {
+    font-size: 0.95em;
+}
+.awards strong {
+     color: #e0f2f1; /* Very light teal */
+}
+
+/* Publication links - smaller font */
+.publications a {
+    font-size: 0.8em; /* Smaller font size for publication links */
+    color: #80cbc4; /* Light teal for links on dark bg */
+}
+
+/* --- Optional: Basic Responsiveness --- */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        width: 95%; /* Use more width on smaller screens */
+    }
+    .left-column, .right-column {
+        flex: none; /* Reset flex */
+        width: 100%;
+    }
+    .job-header {
+        flex-direction: column; /* Stack title and date */
+        align-items: flex-start;
+    }
+    .date-location {
+        text-align: left;
+        padding-left: 0;
+        margin-top: 5px;
+    }
+     .main-header h1 {
+        font-size: 1.8em;
+    }
+     .main-header h2 {
+        font-size: 1.1em;
+    }
+}
