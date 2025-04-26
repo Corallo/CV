@@ -1,4 +1,3 @@
-/* Basic Reset & Body */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,56 +8,52 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4; /* Light background for contrast */
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    padding: 20px 0; /* Add some padding top/bottom */
+    padding: 20px 0; 
 }
 
-/* Container */
 .cv-container {
     display: flex;
-    max-width: 1000px; /* Adjust as needed */
+    max-width: 1000px; 
     width: 100%;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Columns */
 .left-column {
-    flex: 2; /* Takes up 2/3rds */
+    flex: 2; 
     padding: 30px;
 }
 
 .right-column {
-    flex: 1; /* Takes up 1/3rd */
-    background-color: #004d40; /* Dark Teal */
+    flex: 1;
+    background-color: #004d40;
     color: #fff;
     padding: 30px;
 }
 
-/* Links */
 a {
-    color: #0077cc; /* Standard link blue */
+    color: #0077cc;
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
 }
 .left-column a {
-     color: #00695c; /* Teal link color for left column */
+     color: #00695c;
 }
 .right-column a {
-    color: #80cbc4; /* Lighter teal for links on dark bg */
+    color: #80cbc4;
 }
 .right-column a:hover {
      color: #b2dfdb;
 }
 
 
-/* Header */
 .main-header h1 {
-    color: #004d40; /* Dark Teal */
+    color: #004d40;
     font-size: 2.2em;
     margin-bottom: 5px;
     font-weight: 600;
@@ -66,7 +61,7 @@ a:hover {
 }
 
 .main-header h2 {
-    color: #00796b; /* Medium Teal */
+    color: #00796b;
     font-size: 1.3em;
     font-weight: 400;
     margin-bottom: 15px;
@@ -75,75 +70,67 @@ a:hover {
 }
 
 .contact-info {
-    /* Added */
-    display: flex; /* Use flexbox for alignment */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 5px 15px; /* Add spacing between items (row-gap column-gap) */
-    margin-bottom: 15px; /* Maintain bottom margin */
-    padding-bottom: 10px; /* Maintain padding */
-    border-bottom: 1px solid #eee; /* Maintain border */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .contact-info span {
-    /* Removed display: block; */
-    /* Removed margin-bottom: 5px; (handled by gap) */
     font-size: 0.9em;
     color: #555;
-    display: inline-flex; /* Align icon and text nicely */
+    display: inline-flex;
     align-items: center;
 }
 .contact-info i {
     margin-right: 8px;
-    color: #00796b; /* Medium Teal icons */
-    width: 15px; /* Align icons */
+    color: #00796b;
+    width: 15px;
     text-align: center;
 }
-/* Section Headers */
 h3 {
     text-transform: uppercase;
-    color: #004d40; /* Dark Teal */
+    color: #004d40;
     font-size: 1.1em;
-    margin-top: 25px; /* Space above section */
+    margin-top: 25px;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #00796b; /* Medium Teal underline */
+    border-bottom: 2px solid #00796b;
     letter-spacing: 1px;
 }
 .right-column h3 {
     color: #fff;
-    border-bottom-color: #80cbc4; /* Lighter teal underline */
+    border-bottom-color: #80cbc4;
 }
 
-/* Experience & Education Items */
 .experience article,
 .education article {
     margin-bottom: 20px;
 }
 
-/* Font size for Experience description list items */
 .experience article ul li {
-    font-size: 0.8em; /* Target size */
-    line-height: 1.5; /* Added for consistency */
+    font-size: 0.8em;
+    line-height: 1.5;
     margin-bottom: 5px;
     position: relative;
     padding-left: 15px;
 }
-.experience article ul li::before { /* Ensure bullets are styled */
+.experience article ul li::before {
     content: '•';
     color: #00796b;
     font-weight: bold;
     position: absolute;
     left: 0;
-    /* Adjust top slightly if needed for vertical alignment */
     top: 1px;
 }
 
-/* Adjusted font size for Experience descriptions */
 .experience ul li {
     margin-bottom: 5px;
-    font-size: 0.9em; /* Adjusted font size */
-    position: relative; /* For custom bullet */
-    padding-left: 15px; /* Space for custom bullet */
+    font-size: 0.9em;
+    position: relative;
+    padding-left: 15px;
 }
 
 
@@ -151,7 +138,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0px; /* Reduced from 5px to 2px */
+    margin-bottom: 0px;
 }
 
 .job-header h4 {
@@ -172,7 +159,7 @@ h3 {
 }
 
 .company {
-    color: #00796b; /* Medium Teal */
+    color: #00796b;
     font-weight: 600;
     font-size: 0.95em;
 }
@@ -183,69 +170,66 @@ h3 {
     text-align: right;
 }
 
-h4 { /* Job Title, Degree, Project Title */
+h4 {
     font-size: 1.1em;
     color: #333;
     font-weight: 600;
     margin-bottom: 2px;
 }
-.right-column h4 { /* Publication Titles */
-     color: #e0f2f1; /* Very light teal */
+.right-column h4 {
+     color: #e0f2f1;
 }
 
-.company, .project-link { /* Company Name, Project Links */
-    color: #00796b; /* Medium Teal */
+.company, .project-link {
+    color: #00796b;
     font-weight: 600;
     font-size: 0.95em;
     margin-bottom: 8px;
 }
 .project-link {
-    font-size: 0.75em; /* Smaller font size for GitHub links */
+    font-size: 0.75em;
     margin-bottom: 8px;
 }
 
 .project-link a {
-    color: #00796b; /* Medium Teal */
-    margin-right: 10px; /* Space between multi-agent links */
+    color: #00796b;
+    margin-right: 10px;
 }
 
 ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 15px; /* Indent list */
+    list-style: none;
+    padding-left: 15px;
     margin-top: 5px;
 }
 
 li {
     margin-bottom: 5px;
     font-size: 0.95em;
-    position: relative; /* For custom bullet */
-    padding-left: 15px; /* Space for custom bullet */
+    position: relative;
+    padding-left: 15px;
 }
 
-li::before { /* Custom bullet */
+li::before {
     content: '•';
-    color: #00796b; /* Medium Teal bullet */
+    color: #00796b;
     font-weight: bold;
     position: absolute;
     left: 0;
     top: 0;
 }
 
-/* Projects */
 .projects article {
     margin-bottom: 20px;
 }
 
-/* Font size for Project description paragraphs */
 .projects article p:not(.project-link) {
-    font-size: 0.8em; /* Match the experience description size */
+    font-size: 0.8em;
     line-height: 1.5;
     margin-bottom: 8px;
 }
 
-/* Ensure project lists use the exact same styling as experience lists */
 .projects article ul li {
-    font-size: 0.8em; /* Match the experience description size */
+    font-size: 0.8em;
     line-height: 1.5;
     margin-bottom: 5px;
     position: relative;
@@ -260,18 +244,17 @@ li::before { /* Custom bullet */
     top: 1px;
 }
 
-/* Right Column Specifics */
 .profile-pic-container {
     text-align: center;
     margin-bottom: 20px;
 }
 
 .profile-pic {
-    width: 190px; /* Adjust size as needed */
+    width: 190px;
     height: 190px;
-    border-radius: 50%; /* Circular image */
-    object-fit: cover; /* Ensure image covers the area */
-    border: 3px solid #80cbc4; /* Light teal border */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #80cbc4;
 }
 
 .right-column p {
@@ -279,21 +262,20 @@ li::before { /* Custom bullet */
     margin-bottom: 10px;
 }
 .right-column section > p:last-of-type {
-     margin-bottom: 0; /* Remove bottom margin from last p in section */
+     margin-bottom: 0;
 }
 
-.right-column section article { /* Publications articles */
+.right-column section article {
      margin-bottom: 15px;
      padding-bottom: 10px;
-     border-bottom: 1px dashed #80cbc4; /* Separator */
+     border-bottom: 1px dashed #80cbc4;
 }
 .right-column section article:last-of-type {
-     border-bottom: none; /* Remove border from last item */
+     border-bottom: none;
      margin-bottom: 0;
      padding-bottom: 0;
 }
 
-/* Languages */
 .language-item {
     display: flex;
     justify-content: space-between;
@@ -301,11 +283,11 @@ li::before { /* Custom bullet */
     margin-bottom: 8px;
     font-size: 0.95em;
 }
-.language-item span:first-child { /* Language name */
-    flex-grow: 1; /* Take available space */
+.language-item span:first-child {
+    flex-grow: 1;
 }
-.language-item .level { /* Proficiency text */
-    color: #b2dfdb; /* Lighter teal */
+.language-item .level {
+    color: #b2dfdb;
     margin: 0 10px;
     font-style: italic;
     font-size: 0.9em;
@@ -317,54 +299,25 @@ li::before { /* Custom bullet */
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid #b2dfdb; /* Outline color */
+    border: 1px solid #b2dfdb;
     margin-left: 4px;
 }
 .dot.filled {
-    background-color: #b2dfdb; /* Fill color */
+    background-color: #b2dfdb;
 }
 
-/* Awards */
 .awards i {
-    color: #80cbc4; /* Light teal gem */
+    color: #80cbc4;
     margin-right: 8px;
 }
 .awards p {
     font-size: 0.95em;
 }
 .awards strong {
-     color: #e0f2f1; /* Very light teal */
+     color: #e0f2f1;
 }
 
-/* Publication links - smaller font */
 .publications a {
-    font-size: 0.8em; /* Smaller font size for publication links */
-    color: #80cbc4; /* Light teal for links on dark bg */
-}
-
-/* --- Optional: Basic Responsiveness --- */
-@media (max-width: 768px) {
-    .cv-container {
-        flex-direction: column;
-        width: 95%; /* Use more width on smaller screens */
-    }
-    .left-column, .right-column {
-        flex: none; /* Reset flex */
-        width: 100%;
-    }
-    .job-header {
-        flex-direction: column; /* Stack title and date */
-        align-items: flex-start;
-    }
-    .date-location {
-        text-align: left;
-        padding-left: 0;
-        margin-top: 5px;
-    }
-     .main-header h1 {
-        font-size: 1.8em;
-    }
-     .main-header h2 {
-        font-size: 1.1em;
-    }
+    font-size: 0.8em;
+    color: #80cbc4;
 }
